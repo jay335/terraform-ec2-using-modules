@@ -73,9 +73,10 @@ jobs:
           name: tfplan
           path: tfplan
 
+      # Commented trigger out: (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+
       - name: Terraform Apply
         if: |
-          '(github.event_name == "push" && github.ref == "refs/heads/main") ||'
           (github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'apply')
         run: terraform apply -auto-approve tfplan
 
