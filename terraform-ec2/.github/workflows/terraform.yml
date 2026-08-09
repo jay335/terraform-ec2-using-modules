@@ -9,7 +9,8 @@ name: Terraform Deploy
 #    branches:
 #     - main
 
-  workflow:
+on:
+  workflow_dispatch:
     inputs:
      action:
       description: 'Terraform action to run'
