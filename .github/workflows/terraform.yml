@@ -32,7 +32,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: terraform-ec2
+        working-directory: terraform-ec2-using-modules/terraform-ec2
 
     steps:
       - name: checkout code
